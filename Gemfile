@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
@@ -33,3 +33,5 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
+gem 'carrierwave'
+gem "fog", "~> 1.3.1"
