@@ -22,10 +22,9 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    review_var = @review
+    review_var = @review # idk why but casting accessing the user_id directly with @review.user_id does not work on the life system! Changed this and it is working now
     review_var.user_id = current_user.id
     @review = review_var
-    #@review.user_id = current_user.id
     @review.save
     respond_with(@review)
   end
