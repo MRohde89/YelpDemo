@@ -22,6 +22,9 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
+    review_var = @review
+    review_var.user_id = current_user.id
+    @review = review_var
     #@review.user_id = current_user.id
     @review.save
     respond_with(@review)
